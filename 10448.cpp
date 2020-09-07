@@ -4,13 +4,13 @@
 using namespace std;
 
 int main() {
-	int n = 0; // Å×½ºÆ® ÄÉÀÌ½ºÀÇ °¹¼ö
-	int sum = 0; // »ï°¢ÇÕ
-	int triangle[44]; // »ï°¢ÇÕÀ» ´ãÀ» ¹è¿­
+	int n = 0; // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤ì˜ ê°¯ìˆ˜
+	int sum = 0; // ì‚¼ê°í•©
+	int triangle[44]; // ì‚¼ê°í•©ì„ ë‹´ì„ ë°°ì—´
 	int chk = 0;
 
 	cin >> n;
-	int* test = (int*)malloc(sizeof(int) * n); // Å×½ºÆ® ÄÉÀÌ½º
+	int* test = (int*)malloc(sizeof(int) * n); // í…ŒìŠ¤íŠ¸ ì¼€ì´ìŠ¤
 
 	for (int i = 0; i < n; i++) {
 		cin >> test[i];
@@ -22,15 +22,15 @@ int main() {
 	}
 	for (int m = 0; m < n; m++) {
 		chk = 0;
-		for (int i = 0; i < 45; i++) {
+		for (int i = 0; i < 44; i++) {
 			if (chk == 1) {
 				break;
 			}
-			for (int j = 0; j < 45; j++) {
+			for (int j = 0; j < 44; j++) {
 				if (chk == 1) {
 					break;
 				}
-				for (int k = 0; k < 45; k++) {
+				for (int k = 0; k < 44; k++) {
 					if (triangle[i] + triangle[j] + triangle[k] == test[m]) {
 						cout << 1 << '\n';
 						chk = 1;
@@ -40,7 +40,7 @@ int main() {
 			}
 		}
 		if (chk == 0) {
-			cout << 0 << " mÀº" << m <<  '\n';
+			cout << 0 << '\n';
 		}
 	}
 	
